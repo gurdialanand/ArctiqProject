@@ -1,0 +1,16 @@
+---
+
+- name: Deploy EC2 Instance
+  hosts: localhost
+  become: true
+
+  tasks:
+    - ec2: 
+        key_name: Arctiq2  
+        instance_type: t2.micro
+        image: ami-4191b524
+        wait: true
+        count: 1
+        region: us-east-2
+        aws_access_key: AKIAI7Z7O2Y45RO5I4ZQ
+        aws_secret_key: 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   
