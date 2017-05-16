@@ -2,4 +2,7 @@
 localhost ansible_connection=local
 
 [Webserver]
+localhost ansible_connection=local
+
+[Webserver1]
 52.15.153.184 ansible_connection=ssh ansible_user=ec2-user

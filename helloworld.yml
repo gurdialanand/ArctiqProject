@@ -6,4 +6,4 @@
 
   tasks:
     - apt: name=nginx state=present update_cache=yes
-    - template: src=hello.html dest=/usr/share/nginx/html/hello.html  
+    - template: src=index.html dest=/var/www/html  
