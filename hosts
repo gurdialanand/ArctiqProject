@@ -1,0 +1,14 @@
+#This hosts file will to connect to the localhost as well as the AWS instance
+
+#Localhost will be use to deploy the AWS instance
+
+[Localhost]
+localhost ansible_connection=local
+
+#Webserver will be used to SSH to the remote host (AWS Instance)
+
+[Webserver]
+52.60.66.170 ansible_connection=ssh ansible_ssh_user=ec2-user
+
+
+

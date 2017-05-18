@@ -1,0 +1,22 @@
+---
+
+# The purpose of this playbook is to deploy a web application using ansible
+
+#It will connect to the remote host using the attribute "Webserver" (IP can be located in host file) 
+
+#After a successful connection, YUM will be used to install nginx
+
+#nginx's default index.html file will be overwritten by an index.html file that I coded
+
+#As a result if you go to the public IP address (http://xxx.xxx.xxx.xxx) it should display custom code  
+
+- name: HELLO WORLD
+  hosts: Webserver
+  become: true
+
+  tasks:
+      - yum: name=nginx state=present update_cache=yes
+      - template: src=index.html dest=/usr/share/nginx/html 
+
+
+
