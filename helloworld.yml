@@ -1,9 +1,0 @@
----
-
-- name: HELLO WORLD
-  hosts: Webserver
-  become: true
-
-  tasks:
-    - apt: name=nginx state=present update_cache=yes
-    - template: src=index.html dest=/var/www/html  
