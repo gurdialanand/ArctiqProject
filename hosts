@@ -1,8 +1,0 @@
-[Localhost]
-localhost ansible_connection=local
-
-[Webserver]
-localhost ansible_connection=local
-
-[Webserver1]
-xxx.xxx.xxx.xxx ansible_connection=ssh ansible_user=ec2-user
